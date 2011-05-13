@@ -1,5 +1,5 @@
 body {
-    background: #fff;
+    background: #ececec;
     color: #000;
     margin: 10px;
     padding: 0;
@@ -47,4 +47,12 @@ img {
 h1 :link, h1 :visited ,h2 :link, h2 :visited, h3 :link, h3 :visited,
 h4 :link, h4 :visited, h5 :link, h5 :visited, h6 :link, h6 :visited {
     color: inherit;
+}
+
+#main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    border-color: #d2d2d2;
+    border-width: 1px;
 }
