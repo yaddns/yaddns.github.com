@@ -55,4 +55,6 @@ h4 :link, h4 :visited, h5 :link, h5 :visited, h6 :link, h6 :visited {
     width: 800px;
     border-color: #d2d2d2;
     border-width: 1px;
+    border-style: solid;
+    background: #fff;
 }
