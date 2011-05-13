@@ -57,4 +57,5 @@ h4 :link, h4 :visited, h5 :link, h5 :visited, h6 :link, h6 :visited {
     border-width: 1px;
     border-style: solid;
     background: #fff;
+    margin: 7px;
 }
