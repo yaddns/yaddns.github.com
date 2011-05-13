@@ -1,0 +1,50 @@
+body {
+    background: #fff;
+    color: #000;
+    margin: 10px;
+    padding: 0;
+}
+
+body, th, td {
+    font: normal 13px Verdana,Arial,'Bitstream Vera Sans',Helvetica,sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: Arial,Verdana,'Bitstream Vera Sans',Helvetica,sans-serif;
+    font-weight: bold;
+    letter-spacing: -0.018em;
+    page-break-after: avoid;
+}
+
+h1 {
+    font-size: 19px;
+    margin: .15em 1em 0.5em 0
+}
+
+h2 {
+    font-size: 16px
+}
+
+h3 {
+    font-size: 14px
+}
+
+img {
+    border: none
+}
+
+/* Link styles */
+:link, :visited {
+    text-decoration: none;
+    color: #b00;
+    border-bottom: 1px dotted #bbb;
+}
+
+:link:hover, :visited:hover {
+    background-color: #eee; color: #555
+}
+
+h1 :link, h1 :visited ,h2 :link, h2 :visited, h3 :link, h3 :visited,
+h4 :link, h4 :visited, h5 :link, h5 :visited, h6 :link, h6 :visited {
+    color: inherit;
+}
