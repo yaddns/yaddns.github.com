@@ -9,15 +9,21 @@
       <h1>Yaddns</h1>
 
       <p>
-        Yaddns is a small ddns client with multiple ddns server supports and a high flexibility.
+        Yaddns is a small dynamic dns client with multiple servers support and a high flexibility.
+        <br/><br/>
+        Current stable version use autotools and can retrieve the wan ip address by using one web service (like http://checkip.dyndns.org/) or using directly the wan interface on your machine. Also, it supports these dynamic dns services:
+
+        <ul>
+          <li>dyndns (<a class="ext-link" href="http://www.dyndns.org/">http://www.dyndns.org</a>)</li>
+          <li>no-ip (<a class="ext-link" href="http://www.no-ip.com/">http://www.no-ip.com</a>)</li>
+          <li>dyndnsit (<a class="ext-link" href="http://dyndns.it/">http://dyndns.it</a>)</li>
+          <li>ovh (<a class="ext-link" href="http://guide.ovh.com/DynDns">http://guide.ovh.com/DynDns</a>)</li>
+          <li>sitelution (<a class="ext-link" href="https://www.sitelutions.com/info/sldns">https://www.sitelutions.com/info/sldns</a>)</li>
+        </ul>
       </p>
 
       <p>
-        Current stable source is <strong>yaddns 0.1.2</strong> <a class="ext-link" href="http://download.gna.org/yaddns/yaddns-0.1.2.tar.gz"><span class="icon">yaddns-0.1.2.tar.gz</span></a> (<a class="source" href="https://github.com/yaddns/yaddns/blob/yaddns-0.1.2/ChangeLog">view changelog</a>). <strong>yaddns 0.1.2</strong> support only dyndns.org service and direct wan ip address retrieve.
-      </p>
-
-      <p>
-        Next release is <strong>yaddns 1.1</strong>. It will support changeip, dyndns, dyndnsit, no-ip, ovh and sitelutions services and will have indirect wan ip address retrieve mode. <strong>There is an 1.1-rc4</strong> <a class="source" href="https://github.com/yaddns/yaddns/tree/yaddns-1.1-rc4/">source browsing</a>, <a class="ext-link" href="http://download.gna.org/yaddns/yaddns-1.1-rc4.tar.gz"><span class="icon">yaddns-1.1-rc4.tar.gz</span></a> (<a class="source" href="https://github.com/yaddns/yaddns/blob/yaddns-1.1-rc4/ChangeLog">view changelog</a>).
+        Current stable version is <strong>yaddns 1.1</strong> <a class="ext-link" href="http://download.gna.org/yaddns/yaddns-1.1.tar.gz"><span class="icon">yaddns-1.1.tar.gz</span></a> (<a class="source" href="https://github.com/yaddns/yaddns/blob/yaddns-1.1/ChangeLog">view changelog</a>).
       </p>
 
       <p>
@@ -27,15 +33,44 @@
       <h2>Download</h2>
 
       <ul>
-        <li><a class="ext-link" href="http://download.gna.org/yaddns/yaddns-0.1.2.tar.gz"><span class="icon">http://download.gna.org/yaddns/yaddns-0.1.2.tar.gz</span></a></li>
-        <li><a class="ext-link" href="http://download.gna.org/yaddns/yaddns-1.1-rc4.tar.gz"><span class="icon">http://download.gna.org/yaddns/yaddns-1.1-rc4.tar.gz</span></a></li>
+        <li><a class="ext-link" href="http://download.gna.org/yaddns/yaddns-1.1.tar.gz"><span class="icon">http://download.gna.org/yaddns/yaddns-1.1.tar.gz</span></a></li>
       </ul>
+
+      <h2>Packages</h2>
+
+      <h3>Gentoo</h3>
+
+      There a package for yaddns here : <a class="ext-link" href="https://github.com/lamusicc/music/tree/master/net-dns/yaddns">https://raw.github.com/lamusicc/music/master/list.xml</a>. It's an overlay maintened by LaMusic. To use it, emerge layman and append the overlay link to <b>overlays</b> variable in file /etc/layman/layman.cfg like this:
+
+      <quote>
+      overlays  : http://www.gentoo.org/proj/en/overlays/repositories.xml
+	https://raw.github.com/lamusicc/music/master/list.xml
+      </quote>
+
+      and type this in root:
+
+      <quote>
+        # layman -L -k
+        # layman -a music
+        # eix-update    (emerge eix to have this command)
+        # emerge -av yaddns
+      </quote>
+
+      and to keep updated the overlay repository on your machine, type:
+
+      <quote>
+        # layman -S
+      </quote>
+
+      <h3>OpenWRT</h3>
+
+      <a class="ext-link" href="https://dev.openwrt.org/browser/packages/net/yaddns">https://dev.openwrt.org/browser/packages/net/yaddns</a>
 
       <h2 id="Documentation">Documentation</h2>
 
       <ul>
         <li><a class="wiki" href="https://github.com/yaddns/yaddns/wiki/How-to-use-yaddns">HowTo use yaddns</a></li>
-        <li>There 2 man files : yaddns (1) and yaddns.conf (5)</li>
+        <li>There 2 man files in distribution : yaddns (1) and yaddns.conf (5)</li>
       </ul>
 
       <h2>Get the current development source</h2>
@@ -53,6 +88,7 @@
 
       <ul>
         <li><a class="ext-link" href="https://dev.openwrt.org/changeset/24959"><span class="icon">https://dev.openwrt.org/changeset/24959</span></a> Integration of yaddns in openwrt (Thanks to Paul Fertser)</li>
+       <li><a class="ext-link" href="https://github.com/lamusicc/music/tree/master/net-dns/yaddns"><span class="icon">https://github.com/lamusicc/music/tree/master/net-dns/yaddns</span></a> Yaddns package in gentoo (Thanks to LaMusic)</li>
       </ul>
 
       <h2 id="Contact">Contact</h2>
