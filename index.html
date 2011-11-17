@@ -44,23 +44,23 @@
       There a package for yaddns here : <a class="ext-link" href="https://github.com/lamusicc/music/tree/master/net-dns/yaddns">https://raw.github.com/lamusicc/music/master/list.xml</a>. It's an overlay maintened by LaMusic. To use it, emerge layman and append the overlay link to <b>overlays</b> variable in file /etc/layman/layman.cfg like this:
 
       <pre class="wiki">
-      overlays  : http://www.gentoo.org/proj/en/overlays/repositories.xml
+ overlays  : http://www.gentoo.org/proj/en/overlays/repositories.xml
 	https://raw.github.com/lamusicc/music/master/list.xml
       </pre>
 
       and type this in root:
 
       <pre class="wiki">
-        # layman -L -k
-        # layman -a music
-        # eix-update    (emerge eix to have this command)
-        # emerge -av yaddns
+ # layman -L -k
+ # layman -a music
+ # eix-update    (emerge eix to have this command)
+ # emerge -av yaddns
       </pre>
 
       and to keep updated the overlay repository on your machine, type:
 
       <pre class="wiki">
-        # layman -S
+ # layman -S
       </pre>
 
       <h3>OpenWRT</h3>
